@@ -1,0 +1,8 @@
+.carrousel {
+  width: 50%;
+  height: 50%;
+  position: fixed;
+  left: 25%;
+  top: 25%;
+  background-color: rgb(216, 187, 147);
+}

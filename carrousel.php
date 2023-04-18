@@ -2,7 +2,7 @@
     /**
      * Plugin name:Carrousel
      * Author:Marie-Ève Pelletier
-     * Auuthor URI:https://github.com/marieeve0916
+     * Author URI:https://github.com/marieeve0916
      * Description:Permet d'afficher les images d'une galerie dans une boîte modale navigable
      */
 
@@ -43,8 +43,8 @@
         return '<button class= "carrousel__ouvrir">Ouvrir Carrousel</button>
                 <div class="carrousel">
                     <button class= "carrousel__x">X</button>
-                    <figure class="carrousel__figure></figure>
-                    <form class="carrousel__form></form>
+                    <figure class="carrousel__figure"></figure>
+                    <form class="carrousel__form"></form>
                 </div>';
 
      }

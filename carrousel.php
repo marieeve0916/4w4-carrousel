@@ -45,6 +45,10 @@
                     <button class= "carrousel__x">X</button>
                     <figure class="carrousel__figure"></figure>
                     <form class="carrousel__form"></form>
+                    <div class= "fleches">
+                        <button class="fleche gauche"></button>
+                        <button class="fleche droite"></button>
+                    </div>
                 </div>';
 
      }

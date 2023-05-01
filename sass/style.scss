@@ -66,3 +66,30 @@
     margin: 5px;
     display: inline-block;
 }
+
+.fleches {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+    bottom: 50%;
+}
+
+.fleche {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    z-index: 10;
+
+}
+  
+.droite {
+    transform: rotate(-45deg);
+    z-index: 10;
+}
+
+.gauche {
+    transform: rotate(135deg);
+  }

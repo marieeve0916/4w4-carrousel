@@ -93,3 +93,7 @@
 .gauche {
   transform: rotate(135deg);
 }
+
+.carrousel__ouvrir {
+  display: none;
+}

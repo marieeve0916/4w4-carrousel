@@ -125,5 +125,8 @@
             carrousel__form.children[index].checked = true;
             ancien_index = index
         }
+            
+
+        
     }
 )()

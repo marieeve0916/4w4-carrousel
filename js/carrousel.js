@@ -18,9 +18,9 @@
         // console.log(galerie__img.length);
         
         // Variable pour la position et l'index
-        let index = 0;
-        let ancien_index = -1;
-        let position = 0;
+        let index = 0; // Permet d'identifier l'image courante
+        let ancien_index = -1; // Permet d'identifier l'image précédente
+        let position = 0; // Permet d'indexer l'ensemble des images de la galeries et du carrousel, indexer les images des boutons radios
 
 
         // Boucle qui permet de construire le carrousel
@@ -79,17 +79,45 @@
             })
         }
     
+        // Lorsqu'on clique sur la flèche droite, l'index augmente jusqu'à la
+        // dernière image, où il revient à la première par la suite
+        fleche__droite.addEventListener('mousedown', function(){
+            if (index < galerie__img.length - 1) {
+                //console.log("Clic flèche");
+                index++;
+                afficher_image(index)
+            }
+
+            else {
+                //console.log("Clic flèche");
+                index = 0;
+                afficher_image(index)
+            }
+        })
+
+        // Lorsqu'on clique sur la flèche gauche, l'index diminue jusqu'à la
+        // première image, où il revient à la dernière par la suite
+        fleche__gauche.addEventListener('mousedown', function(){
+            if (index > 0) {
+                //console.log("Clic flèche");
+                index--;
+                afficher_image(index)
+            }
+
+            else {
+                //console.log("Clic flèche");
+                index = galerie__img.length - 1;
+                afficher_image(index)
+            }
+        })
+
+
         // Fonction pour gérer l'affichage des images
         function afficher_image(index){
             if (ancien_index != -1){
                 // carrousel__figure.children[ancien_index].style.opacity = 0  
                 carrousel__figure.children[ancien_index].classList.remove('carrousel__img--activer')
                 carrousel__form.children[ancien_index].checked = false;
-                fleche__droite.addEventListener('mousedown', function(){
-                    console.log("Clic flèche");
-                    index = ancien_index;
-                    position++;
-                })
             }
 
             // carrousel__figure.children[index].style.opacity = 1

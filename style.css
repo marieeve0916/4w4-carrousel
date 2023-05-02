@@ -79,10 +79,12 @@
   height: 1.1rem;
   border: solid rgba(10, 10, 15, 0.889);
   border-width: 0 5px 5px 0;
+  border-radius: 5px;
   display: inline-block;
   padding: 3px;
   z-index: 10;
   background: transparent;
+  cursor: pointer;
 }
 
 .droite {

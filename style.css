@@ -93,6 +93,7 @@
   border: solid rgba(241, 241, 241, 0.889);
   border-width: 0 5px 5px 0;
   border-radius: 5px;
+  border-radius: 5px;
   display: inline-block;
   padding: 3px;
   z-index: 10;
@@ -106,6 +107,7 @@
   padding: 10px;
   border: solid #bc91d4;
   border-width: 0 5px 5px 0;
+  cursor: pointer;
 }
 
 .droite {

@@ -121,12 +121,42 @@
             }
 
             // carrousel__figure.children[index].style.opacity = 1
+            redimensionner_carrousel();
             carrousel__figure.children[index].classList.add('carrousel__img--activer')
             carrousel__form.children[index].checked = true;
             ancien_index = index
         }
             
-
+        function redimensionner_carrousel(){
+            /* récupérer les dimensions de l'image courante */
+            const imageWidth = carrousel__figure.children[index].naturalWidth
+            const imageHeight = carrousel__figure.children[index].naturalHeight
+            const windowWidth = window.innerWidth
+            const windowHeight = window.innerHeight
+          
+            let carrouselWidth = windowWidth 
+            if (windowWidth > 1000)
+            {
+              carrouselWidth = windowWidth - windowWidth/2
+            }
+          
+            let carrouselHeight = carrouselWidth * imageHeight/imageWidth
+          
+            carrousel.style.width = `${carrouselWidth}px`
+            carrousel.style.height = `${carrouselHeight}px`
+            carrousel.style.top= `${(windowHeight-carrouselHeight)/2}px`
+            carrousel.style.left= `${(windowWidth-carrouselWidth)/2}px`
+          
+          
+          
+          
+            console.log(
+            `imageWidth= ${imageWidth}
+            imageHeight= ${imageHeight}
+            windowWidth= ${windowWidth}
+            windowHeight= ${windowHeight}
+            `)
+        }
         
     }
 )()

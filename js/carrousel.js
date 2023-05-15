@@ -56,7 +56,7 @@
             //console.log(elm.getAttribute('src'))
             let img = document.createElement('img')
             // img.setAttribute('src', elm.getAttribute('src'))
-            img.src = elm.src
+            img.src = elm.src.substr(0,elm.src.length-12) + ".jpg"
             img.classList.add('carrousel__img')
             //console.log (img.getAttribute('src'))
             carrousel__figure.appendChild(img)
@@ -127,6 +127,40 @@
             ancien_index = index
         }
             
+        // function redimensionner_carrousel(){
+        //     /* récupérer les dimensions de l'image courante */
+        //     const imageWidth = carrousel__figure.children[index].naturalWidth
+        //     const imageHeight = carrousel__figure.children[index].naturalHeight
+        //     const windowWidth = window.innerWidth
+        //     const windowHeight = window.innerHeight
+          
+        //     let carrouselHeight = windowHeight - 80
+        //     if (windowWidth > 1000)
+        //     {
+        //       carrouselHeight = windowHeight - windowHeight/5
+
+        
+        //     }
+          
+        //     let carrouselWidth = carrouselHeight * imageWidth/imageHeight
+          
+        //     carrousel.style.width = `${carrouselWidth}px`
+        //     carrousel.style.height = `${carrouselHeight}px`
+        //     carrousel.style.top= `${(windowHeight-carrouselHeight)/2}px`
+        //     carrousel.style.left= `${(windowWidth-carrouselWidth)/2}px`
+          
+          
+          
+          
+        //     console.log(
+        //     `imageWidth= ${imageWidth}
+        //     imageHeight= ${imageHeight}
+        //     windowWidth= ${windowWidth}
+        //     windowHeight= ${windowHeight}
+        //     `)
+        // }
+
+
         function redimensionner_carrousel(){
             /* récupérer les dimensions de l'image courante */
             const imageWidth = carrousel__figure.children[index].naturalWidth
@@ -134,13 +168,14 @@
             const windowWidth = window.innerWidth
             const windowHeight = window.innerHeight
           
-            let carrouselWidth = windowWidth 
+            let carrouselWidth = windowWidth
             if (windowWidth > 1000)
             {
               carrouselWidth = windowWidth - windowWidth/2
+              let carrouselHeight = carrouselWidth * imageHeight/imageWidth
             }
           
-            let carrouselHeight = carrouselWidth * imageHeight/imageWidth
+            carrouselHeight = carrouselWidth * imageHeight/imageWidth
           
             carrousel.style.width = `${carrouselWidth}px`
             carrousel.style.height = `${carrouselHeight}px`
@@ -156,7 +191,7 @@
             windowWidth= ${windowWidth}
             windowHeight= ${windowHeight}
             `)
-        }
+          }
         
     }
 )()

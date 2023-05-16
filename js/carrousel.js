@@ -56,7 +56,7 @@
             //console.log(elm.getAttribute('src'))
             let img = document.createElement('img')
             // img.setAttribute('src', elm.getAttribute('src'))
-            img.src = elm.src.substr(0,elm.src.length-12) + ".jpg"
+            img.src = elm.src.substr(0,elm.src.length - 13) + ".jpg"
             img.classList.add('carrousel__img')
             //console.log (img.getAttribute('src'))
             carrousel__figure.appendChild(img)

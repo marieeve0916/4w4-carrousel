@@ -4,18 +4,10 @@
     position: fixed;
     left: 10%;
     top: 10%;
-    background-color: #a476bf;
+    background-color: #f6f6f6;
     border-radius: 5px;
-
     scale: 0;
     transition: all 300ms ease-in-out;
-
-    // @media screen and (max-width:576px) {
-    //     width: 100vw;
-    //     height: 100vh;
-    //     left: 0%;
-    //     top: 13%;
-    // }
 }
 
 .carrousel__figure {
@@ -52,9 +44,8 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     font-size: 1.3rem;
-    color: rgb(4, 4, 7);
-    background-color: rgba(245, 245, 245, 0.686);
-    mix-blend-mode: overlay;
+    color: rgba(248, 248, 248, 0.938);
+    background-color: rgba(132, 130, 130, 0.686);
     border-radius: 4px;
     margin: 2px;
     margin-top: 2.5px;
@@ -72,6 +63,7 @@
     bottom: 0;
     text-align: center;
     width: 100%;
+    padding: 10px;
 }
 
 .carrousel__rad {
@@ -92,7 +84,7 @@
     width: 1.1rem;
     height: 1.1rem;
     // border: solid rgba(10, 10, 15, 0.889);
-    border: solid rgba(241, 241, 241, 0.889);
+    border: solid rgba(233, 208, 255, 0.915);
     // mix-blend-mode: screen;
     border-width: 0 5px 5px 0;
     border-radius: 5px;
